@@ -6,7 +6,7 @@
 /*   By: dpotvin <dpotvin@student.42quebec.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 02:08:16 by dpotvin           #+#    #+#             */
-/*   Updated: 2023/03/20 03:01:44 by dpotvin          ###   ########.fr       */
+/*   Updated: 2023/03/20 03:21:11 by dpotvin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,10 +152,8 @@ t_gnl *better_gnl(int fd)
 	static char		*buffer;
 	static t_gnl	t;
 	
-	// Check if the FD is valid and Buffer size isnt stupid
 	if (fd < 0 || BUFFER_SIZE < 1) 
 		return (0);
-
 	buffer = ft_read(fd, buffer);
 	if (!buffer)
 		return (0);
